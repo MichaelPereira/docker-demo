@@ -1,0 +1,10 @@
+cat app.py
+
+cat DockerfileBadBase
+docker build -f DockerfileBadBase .
+docker run <sha>
+
+
+cat DockerfileGoodBase
+docker build -f DockerfileGoodBase .
+docker run <sha>

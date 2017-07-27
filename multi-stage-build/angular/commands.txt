@@ -1,0 +1,11 @@
+ng new myapp
+
+cd myapp
+mkdir nginx
+cp ../nginx/default.conf nginx/default.conf
+cp ../Dockerfile .
+
+docker build -t my-app .
+
+docker run -p 8080:80 my-app
+

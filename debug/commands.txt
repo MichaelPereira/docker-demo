@@ -1,0 +1,4 @@
+docker build .
+
+docker run -it <layer_sha> bash
+docker run -it <previous_layer_sha> bash
