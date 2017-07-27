@@ -1,0 +1,20 @@
+docker run -d --name nginx1 nginx
+docker run -d --name nginx2 nginx
+docker run -d --name nginx3 nginx
+docker run -d --name nginx4 nginx
+
+docker exec -it nginx1 bash
+# create file
+
+docker exec -it nginx2 bash
+# create another file
+
+docker exec -it nginx1 bash
+# check file
+
+docker exec -it nginx2 bash
+# check file
+
+docker kill nginx1 nginx2 nginx3 nginx4
+
+

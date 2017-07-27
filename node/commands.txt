@@ -1,0 +1,24 @@
+cat package.json
+cat server.js
+
+cat DockerfileBadCaching
+
+docker build -t node-web-app -f DockerfileBadCaching .
+docker build -t node-web-app -f DockerfileBadCaching .
+
+#edit server.js
+docker build -t node-web-app -f DockerfileBadCaching .
+
+
+# Clear layers cache
+docker rmi node-web-app
+docker rmi $(docker images -f dangling=true -q)
+
+
+cat DockerfileGoodCaching
+
+docker build -t node-web-app -f DockerfileGoodCaching .
+docker build -t node-web-app -f DockerfileGoodCaching .
+
+#edit server.js
+docker build -t node-web-app -f DockerfileGoodCaching .

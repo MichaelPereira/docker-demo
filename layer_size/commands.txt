@@ -1,0 +1,10 @@
+cat DockerfileBigContainer
+cat DockerfileSmallContainer
+
+docker build -t big_container   -f DockerfileBigContainer   .
+docker build -t small_container -f DockerfileSmallContainer .
+
+docker history | grep _container
+
+cat DockerfileBadContainer
+docker build -t bad_container   -f DockerfileBadContainer   .

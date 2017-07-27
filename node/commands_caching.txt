@@ -1,0 +1,10 @@
+docker build -t node-web-app -f DockerfileGoodCaching .
+docker build -t node-web-app2 -f DockerfileGoodCaching .
+
+docker history node-web-app
+docker history node-web-app2
+
+docker build --no-cache -t node-web-app3 -f DockerfileGoodCaching .
+
+docker history node-web-app3
+docker history node-web-app

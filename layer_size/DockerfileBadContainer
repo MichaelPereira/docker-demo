@@ -1,0 +1,5 @@
+FROM ubuntu
+ADD ./bigfile /
+RUN rm /bigfile
+RUN ls -la /bigfile
+
