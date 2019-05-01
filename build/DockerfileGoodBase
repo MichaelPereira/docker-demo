@@ -1,3 +1,4 @@
-FROM python:2
+FROM python:3
 COPY . /app
+RUN touch /filename
 CMD python /app/app.py
